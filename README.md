@@ -2,7 +2,7 @@
         
 
 ### Prerequisites
-    install docker https://docs.docker.com/v17.09/engine/installation/
+    install https://docs.docker.com/docker-for-mac/install/
     install docker-compose https://docs.docker.com/compose/install/
 
 ### Installation steps
