@@ -1,0 +1,62 @@
+version: '3.6'
+
+services:
+    imageapi:
+        build:
+            context: .
+            dockerfile: docker/imageapi/Dockerfile
+        volumes:
+            - ./imageapi:/service/www/imageapi
+        expose:
+          - 8000
+          - 8080
+        ports:
+            - '8000:8000'
+            - '8080:80'
+            - '2222:22'
+        env_file:
+            - ./docker/.env
+        stdin_open: true
+        tty: true
+        links:
+            - mongo:mongo
+#            - db:db
+        depends_on:
+            - mongo
+
+#        command: "gunicorn -c gunicorn_app.py imageapi.wsgi"
+
+    statisticapi:
+        build:
+            context: .
+            dockerfile: docker/statisticapi/Dockerfile
+        volumes:
+            - ./statisticapi:/service/www/statisticapi
+        expose:
+            - 8001
+            - 8081
+        ports:
+            - '8001:8000'
+            - '8081:80'
+            - '2224:22'
+        env_file:
+            - ./docker/.env
+        stdin_open: true
+        tty: true
+        links:
+            - mongo:mongo
+            - imageapi:imageapi
+        depends_on:
+            - mongo
+            - imageapi
+
+
+    mongo:
+        image: mongo
+        hostname: mongo
+        container_name: imageapidb
+        ports:
+            - '27018:27017'
+        volumes:
+            - ./docker/data/mongo:/data/db
+

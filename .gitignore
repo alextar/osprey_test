@@ -1,0 +1,15 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/
+__pycache__/
+docker/data/
+imageapi/__pycache__/
+imageapi/core/__pycache__/
+imageapi/services/__pycache__/
+imageapi/utils/__pycache__/
+statisticapi/__pycache__/
+statisticapi/core/__pycache__/
+statisticapi/services/__pycache__/
+statisticapi/services/image/__pycache__/
+statisticapi/tests/__pycache__/
+statisticapi/tests/utils/__pycache__/
+statisticapi/utils/__pycache__/
