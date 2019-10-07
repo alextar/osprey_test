@@ -11,6 +11,9 @@
     > cd /path/to/your/install/ospreytest
     > docker-compose build
     > docker-compose up
+    > init cameras data 
+    docker exec -it ospreytest_statisticapi_1 python -c 'from tests.utils.db import init_db; init_db()'
+    > open browser http://localhost:8081/statistic
 
 ## Working on the project
 
