@@ -1,4 +1,4 @@
-CAMERAS_COUNT = 10
+CAMERAS_COUNT = 40
 CAMERAS_COLLECTION = 'cameras'
 DB_NAME = 'imagedb'
 
