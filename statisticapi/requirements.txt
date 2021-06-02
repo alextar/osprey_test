@@ -49,7 +49,7 @@ six==1.12.0
 starlette==0.12.8
 traitlets==4.3.3
 ujson==1.35
-urllib3==1.25.6
+urllib3==1.26.5
 uvicorn==0.9.0
 uvloop==0.13.0
 wcwidth==0.1.7
