@@ -18,7 +18,7 @@ h11==0.8.1
 httptools==0.0.13
 idna==2.8
 importlib-metadata==0.23
-ipython==7.8.0
+ipython==7.16.3
 ipython-genutils==0.2.0
 itsdangerous==1.1.0
 jedi==0.15.1
